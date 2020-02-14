@@ -1,0 +1,27 @@
+Question:
+======================================================================
+Trees of height [8,2,6]
+Cut the trees horizontally at one point so that the amount of trees standing == amount of trees fallen.
+Heights > 0, any number (float)
+
+[8,2,6]
+4: Standing=4+2+4=10 Fallen=4+0+2=6
+
+Point1 = Cut height > smallest height | to get a proper balance between 
+Point2 = standing + fallen = sum(heights)
+
+Init: cut_point = min(heights)
+For h in heights:
+	Cut every tree with cut_point and sum
+
+
+
+Example
+Cp = 2
+Standing = 2+2+2=6
+fallen=16-6=10
+
+Cp = cp+1
+Standing = 3 + 2 + 3 = 8
+Fallen = 16- 8 = 8 
+
