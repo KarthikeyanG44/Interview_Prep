@@ -1,0 +1,1 @@
+NOTE: When assigning one array to another they both share the same memory location.So any modification to one of them will alter the other too. It's recommended to create a new object of the datastructure. E.G. a = list(b)
