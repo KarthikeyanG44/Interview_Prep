@@ -1,0 +1,25 @@
+def array_of_array_products(arr):
+    #pass # your code goes here
+    if len(arr) == 1:
+      return []
+    
+    ans = []
+    
+    n = len(arr)
+    curSumProduct = 1
+    for idx in range(0,n):
+      ans.append(curSumProduct)
+      curSumProduct = curSumProduct*arr[idx]
+    
+    curSumProduct = 1
+    for idx in range(n-1,-1,-1):
+      ans[idx] *= curSumProduct
+      curSumProduct = curSumProduct*arr[idx]
+      
+      
+    return ans 
+
+
+
+
+
