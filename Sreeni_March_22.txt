@@ -1,0 +1,43 @@
+1000  people
+Array of bed numbers where people are currently occupied
+
+2000
+[5, 20, 100 , 120, 430, 999, 1300, 1999]
+
+index of the next bed = 430 + (999 - 430) / 2
+
+get_bed_allocation()
+# one person is come, where can he be placed such that is most socially distant from next infected person.
+
+set_bed_free(index)
+# person at bed index has been discharged
+
+What initial clarifying questions
+
+
+# What initial clarifying questions you will ask?
+# What are the edge cases for this question and ask what should be output for those cases
+# Talk with the interviewer with an example to see if that is what he wants
+# Come up with algorithm
+# What is the complexity analysis
+
+https://leetcode.com/problems/jump-game/
+# bfs or dfs
+https://leetcode.com/problems/jump-game-ii/
+# use heapq or stack or recursion
+
+# Input: arr = [3, 4, 2, 3, 4, 1, 1, 2, 1], start = 7
+# Output: true
+# can we reach the end? bool
+# number of steps
+# the path (list of indices to travel)
+
+
+# https://leetcode.com/problems/alien-dictionary/
+# https://www.geeksforgeeks.org/given-sorted-dictionary-find-precedence-characters/
+
+
+Do everything fast like sprint
+
+
+
