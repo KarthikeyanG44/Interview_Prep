@@ -1,0 +1,28 @@
+##### in the input string search for { bracket and | symbol. All the characters between will be a possible word ###
+import random
+### we can try to separate functions to find and replace 
+#### also we can iterate through words instead of character by character
+def find_between(s):
+    if s.find("{") != -1 and  s.find("}") != -1:      #### If { and } exists ####
+        start = s.index("{") + len("{")               ##### pick the index of { ###
+        end = s.index("}",start)                     ##### pick the index of } ###
+        return 1,s[start:end]                           #### return found (0,1) and words "op1|op2|op3" ####
+    else:
+        return 0,s
+### Defining a replace function
+def replace(s):
+    c , options = find_between(s)  
+    if c != 0:    #### if options found ####
+        op = options.split('|')   ## split the options ####
+        s = s.replace("{"+options+"}",op[random.randint(0,len(op)-1)])    ## replace contents between { and } with options randomly ##
+        return 1,s                  ### return done and new string ###
+    else:
+        return 0,s 
+        
+if __name__ == "__main__":
+    s = "{I am|I'm} writing {now|this|program} for {Cortx|interview}" 
+    c = 1
+    while(c== 1):               ##### repeat till { and } exisits in string
+        c, s= replace(s)        
+    
+    return s
