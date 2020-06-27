@@ -16,18 +16,12 @@ class Solution:
 
         numIslands = 0
         graphStack = []
-        landIndices = []
         count = 0
-
-        for i in range(nRows):
-            for j in range(nCols):
-                if grid[i][j] == "1":
-                    landIndices.append((i, j))
 
         for landIdx in landIndices:
             i, j = landIdx
             graphStack = []
-            if (not visitedArray[i][j]):
+            if (grid[i][j] == "1" and not visitedArray[i][j]):
                 visitedArray[i][j] = True
                 graphStack.append((i, j))
                 count += 1
